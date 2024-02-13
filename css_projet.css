@@ -1,6 +1,5 @@
 h1,
 h2,
-h2,
 p,
 a,
 ul,
@@ -131,7 +130,7 @@ main.conteneur {
   min-height: 460px;
   max-height: 460px;  
   background-color: #7e1625; /* Affiche une couleur de fond le temps que l'image charge */
-  background-image: url("./image/carrousel1.jpg");  
+  background-image: url("./image/carrousel1.jpg");
   background-repeat: no-repeat; /* Fait en sorte que l'image ne se répète pas et qu'elle prenne toute la place disponible */
   background-size: cover;
 }
@@ -292,5 +291,4 @@ footer {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  text-decoration: none;
   }
