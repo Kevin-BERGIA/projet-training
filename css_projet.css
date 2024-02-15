@@ -1,0 +1,316 @@
+h1,
+h2,
+p,
+a,
+ul,
+li {
+  /* Reset des styles par défaut du navigateur */
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  /* Reset des styles par défaut du navigateur */
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Header */
+
+/* Logo */
+.haut-gauche {  
+  align-self: center; /* Centre le logo dans son espace */
+  padding: 1em;
+  padding-left: 0;
+}
+
+header {  
+  display: flex; /* Affichage flex */
+}
+
+.conteneur {
+  max-width: 80%; /* Donne une taille max de 80% à la div conteneur */
+  margin: 0 auto; /* Centre le conteneur */
+}
+
+/* Contact  & barre de navigation */
+.haut-droite {
+  display: flex;
+  flex-direction: column;  
+  flex: 1; /* Pour que le conteneur prenne toute la place disponible */
+  font-weight: bold;
+  font-size: 70%;
+}
+
+.contact {
+  padding: 1em 0;
+  font-size: 90%;
+  display: flex;
+  justify-content: flex-end; /* Alignement à droite du conteneur */
+  align-items: center; /* Centre les éléments sur l'axe horizontal */
+  gap: 1em;
+}
+
+.social {
+  display: flex;
+  gap: 0.5em;
+  padding-left: 1em;
+}
+
+/* Nav */
+nav {
+  margin: 0;
+  text-align: center;  
+  text-transform: uppercase; /* Transforme le texte en majuscule */
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+nav ul {
+  display: flex;  
+  justify-content: flex-end; /* Alignement des items à la fin du conteneur */
+  flex: 1;
+  gap: 2em;
+}
+
+nav a {
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em;
+}
+
+nav li {
+  /* Centrer les éléments de la liste */
+  display: flex;
+  align-items: center;
+}
+
+nav a:hover {
+  /* Change le background au passage de la souris */
+  background: #eeeeee; /* Gris clair */
+}
+
+/* Ajout d'une flèche pour les sous-menus */
+.deroulant::after {  
+  content: " ▼"; 
+  font-size: 12px;
+  color: #7e1625;
+}
+
+.billeterie-lien {
+  color: #7e1625;  
+  padding-right: 0; /* Suppression du padding droit pour le dernier lien */
+}
+
+/* Main */
+main.conteneur {
+  display: flex;  
+  flex-direction: column; /* Affichage flex en colonne */  
+  gap: 3em; /* Ajout d'un espacement de 3em entre les éléments */
+}
+
+/* Carrousel */
+.carrousel-conteneur {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 1em;
+  margin: auto;
+  padding: 1.5em;
+  min-height: 460px;
+  max-height: 460px;  
+  background-color: #7e1625; /* Affiche une couleur de fond le temps que l'image charge */
+  background-image: url("./image/carrousel1.jpg");
+  background-repeat: no-repeat; /* Fait en sorte que l'image ne se répète pas et qu'elle prenne toute la place disponible */
+  background-size: cover;
+}
+
+
+.carrousel-bouton {
+  cursor: pointer;
+  border-radius: 100%;
+  color: white;
+  background-color: #7e1625;
+  height: 36px;
+  width: 36px;
+  border: none;
+}
+
+.carrousel-bouton:hover {
+  background-color: rgba(105, 13, 26, 0.9);
+}
+
+.article-conteneur {
+  display: flex;  
+  flex: 1; /* Le conteneur prend toute la place disponible pour écarter les boutons de chaque côté */
+  align-items: center;
+}
+
+.carrousel-article {
+  display: flex;
+  flex-direction: column;  
+  flex: 0 1 60%; /* Empêche l'article de s'étirer à plus de 60% de la largeur de la page */
+  color: #ffffff;
+  gap: 1.5em;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ev-date {
+  align-self: flex-start; /* alignement à gauche du conteneur */
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.5em;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 75%;
+  text-transform: uppercase;
+}
+
+.ev-titre {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.ev-lieu {
+  align-self: flex-start;
+  padding-top: 1em;
+  border-top: 1px rgba(255, 255, 255, 0.3) dotted; /* Ajoute la ligne de séparation en pointillés */
+  text-transform: uppercase; /* Transforme le texte en majuscule */
+  font-size: 60%;
+  font-weight: normal;
+}
+
+.ev-boutons {
+  display: flex;
+  gap: 1em;
+}
+
+.salon-bouton {
+  padding: 1em 2em;
+  background-color: #7e1625;
+  color: white;
+  border: 2px rgb(255, 255, 255, 0.5) solid;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 70%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.salon-billeterie {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0 1em 0 0.25em;
+  background-color: white;
+  border: white;
+  color: #7e1625;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 70%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.salon-billeterie img {
+  background-color: rgb(126, 22, 37, 0.3);
+  border-radius: 50px;
+  padding: 0.5em;
+}
+
+/* Description */
+.description-conteneur {
+  margin: auto;
+  display: flex;
+  flex: 1;
+  gap: 1em;
+  justify-content: space-between;
+  min-height: 460px;
+  max-height: 460px;
+}
+
+.description-image {
+  display: flex;
+  max-height: 460px;
+}
+
+.description-milieu {
+  display: flex;
+  padding-top: 1.5em;
+  flex-direction: column;
+  max-width: 40%;
+}
+
+.description-milieu .titre-1 {
+  font-size: 60%;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #7e1625;
+}
+
+.description-milieu .titre-2 {
+  font-size: 2rem;
+  color: black;
+}
+
+.description-p {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-size: 90%;
+  flex-grow: 1;
+}
+
+.description-milieu .salon-bouton {
+  align-self: flex-start; /* alignement à gauche */
+  border: none;
+  padding: 1.5em 2em;
+}
+
+/*Rejoindre le salon*/
+  .carto {
+    margin: auto;
+    display: flex;
+    flex: 1;
+    gap: 1em;
+    justify-content: space-between;
+  }
+
+  .rejoindre {
+    display: flex;
+    padding-top: 1.5em;
+    flex-direction: column;
+    max-width: 20%;
+    font-size: 2em;
+    color: #7e1625;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+  }
+
+/* Footer */
+footer {
+  background-color: #7e1625; /* fond */
+  margin: 2em 0 0 0; /* marge du dessus */
+  text-align: center; /* centrer le texte */
+  padding: 20px 0; /* marge intérieur */
+  color: white;
+  font-size: 11px;
+  bottom: 0; /* en bas */
+  width: 100%;
+}
+
+  .footer-lien {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+  
